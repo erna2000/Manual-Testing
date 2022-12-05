@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "a85fe754-1181-4ad1-a94d-db53fbafc1db",
+		"name": "Erna",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"erna22@gmail.com\",\r\n    \"name\": \"erna22 \",\r\n    \"password\": \"erna.22\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Username",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"erna2000\",\r\n\"email\":\"erna22@gmail.com\",\r\n\"birthday\":\"20.06.2000\",\r\n\"gender\":\"f\",\r\n\"date_start\":\"1.11.2022\",\r\n\"hobby\":\"Test_Qwallity\",\r\n\"name1\":\"Test_Qwallity\",\r\n\"surname1\":\"Ghukasyan\",\r\n\"fathername1\":\"Testi\",\r\n\"cat\":\"x\",\r\n\"dog\":\"Smokey\",\r\n\"parrot\":\"Lola\",\r\n\"cavy\":\"Bubba\",\r\n\"hamster\":\"George\",\r\n\"squirrel\":\"Ollie\",\r\n\"phone\":\"022222222\",\r\n\"adres\":\"Komitas 1/2\",\r\n\"inn\":\"123456789101\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/fullupdateuser",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"fullupdateuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Avatar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "erna22@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/khhar/Desktop/1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/addavatar",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"addavatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete avatar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deleteavatar?email=erna22@gmail.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deleteavatar"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "erna22@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deleteuser/?email=erna22@gmail.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deleteuser",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "erna22@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
